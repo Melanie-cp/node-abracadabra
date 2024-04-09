@@ -1,6 +1,9 @@
 import express from 'express';
 const app = express()
 
+app.get("/Inicio", (req, res) => {
+    res.send("Hola mundo! Servidor con Express js &#128526;")
+})
 
 
 // 404
