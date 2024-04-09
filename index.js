@@ -1,10 +1,14 @@
 import express from 'express';
 const app = express()
 
-app.get("/Inicio", (req, res) => {
-    res.send("Hola mundo! Servidor con Express js &#128526;")
-})
+const usuarios = ["Juan", "Jocelyn", "Astrid", "María", "Ignacia", "Javier", "Brian"]
 
+app.get('/abracadabra/usuarios', (req, res) => {
+    return res.json({
+        ok: true,
+        usuarios: usuarios
+    })
+})
 
 // 404
 app.get('/*', (req, res) => {
